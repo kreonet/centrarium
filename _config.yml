@@ -6,8 +6,10 @@ gems:
   - jekyll-paginate
   - jekyll-toc
 
-exclude:
-  - "/vendor/"
+exclude: [vendor, README.md, LICENSE.md, Gemfile, Gemfile.lock, circle.yml]
+
+keep_files: [.htaccess, files]
+
 
 # Site settings
 title: Centrarium
