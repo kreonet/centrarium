@@ -6,7 +6,7 @@
 
     <div class="site-navigation">
 
-      <p><strong>Site Map</strong></p>
+      <p><strong>사이트맵</strong></p>
       <ul class="pages">
         {% for page in site.pages %}
         {% if page.title and page.main_nav != false %}
@@ -18,14 +18,8 @@
 
     <div class="site-contact">
 
-      <p><strong>Contact</strong></p>
+      <p><strong>관련 사이트</strong></p>
       <ul class="social-media-list">
-        <li>
-          <a href="mailto:{{ site.email }}">
-            <i class="fa fa-envelope-o"></i>
-            <span class="username">{{ site.email }}</span>
-          </a>
-        </li>
 
         {% for social in site.social %}
           {% if social.url != null %}
@@ -42,8 +36,8 @@
     </div>
 
     <div class="site-signature">
-      <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
-      <p class="text">{{ site.description }}</p>
+      <p><strong>{{ site.copyright }}</strong></p>
+      <p class="text">{{ site.copyright_detail }}</p>
     </div>
 
   </div>

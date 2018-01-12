@@ -17,6 +17,12 @@ subtitle: "하나의 아이디로 이용하는 글로벌 무료 Wi-Fi"
 # email: eduroam@kreonet.kr
 name: 에듀롬담당자
 description: 글로벌 Wi-Fi 로밍 서비스, 에듀롬 - 하나의 아이디로 이용하는 글로벌 무료 Wi-Fi 서비스
+copyright: © 1988 - 국가과학기술연구망
+copyright_detail: >
+  대학생과 연구자를 위한 글로벌 Wi-Fi 로밍 서비스인 에듀롬은 
+  <a href="http://www.msip.go.kr">과학기술정보통신부</a>가 지원하고 
+  <a href="http://www.kisti.re.kr">한국과학기술정보연구원</a>이 관리하는 
+  <a href="http://www.kreonet.net">국가과학기술연구망</a>에서 운영합니다.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
