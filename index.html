@@ -13,6 +13,12 @@ layout: default
 </div>
 
 <div class="wrapper">
+{% if paginator.page == 1 %}
+<div class="index-preface">
+{% include index_preface_ko.html %}
+</div>
+<hr />
+{% endif %}
 <ul class="post-list">
   {% for post in paginator.posts %}
   <li>
