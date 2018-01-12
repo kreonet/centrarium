@@ -1,237 +1,156 @@
-# Centrarium [![Circle CI](https://circleci.com/gh/bencentra/centrarium/tree/master.svg?style=svg)](https://circleci.com/gh/bencentra/centrarium/tree/master)
+### 에듀롬 한국 웹사이트
 
-A simple yet classy theme for your Jekyll website or blog. Customizable to fit your style or brand.
+[에듀롬 한국 웹사이트](http://eduroam.kreonet.kr)는 정적 웹사이트 생성기 [지킬(Jekyll)](https://jekyllrb-ko.github.io)를 통해 제작하였습니다.
 
-Built with these awesome libraries:
-* [Bourbon][bourbon]
-* [Neat][neat]
-* [Bitters][bitters]
-* [Refills][refills]
-* [Font Awesome][fontawesome]
-* [HighlightJS][highlightjs]
-* [Lightbox][lightbox]
+정적 웹사이트 생성기는 동적언어(PHP, JAVA)와 데이터베이스(MySQL, MariaDB) 없이 HTML 파일로 웹사이트를 생성합니다. 이를 웹서버에 업로드 하는 것으로 웹사이트를 구축할 수 있습니다. 또는 GitHub Pages를 이용하여 무료로 웹에 게시할 수 있습니다.
 
-Here's a [demo](http://bencentra.com/centrarium). It also works on [GitHub Pages](http://bencentra.github.io/centrarium/). I also use it for [my own website][bencentra].
 
-Inspired by dirkfabisch's [Mediator](https://github.com/dirkfabisch/mediator) theme, which I previously used for my own blog, as well as [Type Theme](http://rohanchandra.github.io/type-theme/).
+### 사이트 내려받기
 
-Cover image by Chris M. Morris ([flickr][cover]).
-
-## Features
-
-This theme comes with a number of features, including:
-* Easily customizable fonts and colors
-* Cover images for your homepage and blog posts
-* Pagination enabled by default
-* Archiving of posts by categories and tags
-* Syntax highlighting for code snippets
-* Disqus integration for post comments
-* Lightbox for viewing full-screen photos and albums
-* Google Analytics with custom page name tracking
-* Social media integration (Twitter, Facebook, LinkedIn, GitHub, and more)
-
-## Installation
-
-If you're just getting started with Jekyll, you can use this repository as a starting point for your own site. Just [download this project](https://github.com/bencentra/centrarium/archive/master.zip) and add all the files to your project. Add your blog posts to the `posts/` directory, and create your pages with the proper Jekyll front matter (see `posts.html` for an example).
-
-If your site already uses Jekyll, follow these steps:
-
-1. Replace the files in the `_includes`, `_layouts`, and `_sass` directories with those from this project.
-2. Replace your `index.html` with the one from this project, and copy over the `posts.html` file as well.
-3. Copy the contents of the `_config.yml` from this project in to yours, and update the necessary information.
-
-Don't forget to install Jekyll and other dependencies:
-```bash
-# cd into project directory
-cd centrarium
-# install Bundler if you don't have it already
-gem install bundler
-# install jekyll, jekyll-archives, jekyll-sitemap, and jekyll-paginate
-bundle install
+Git으로 clone을 하거나, GitHub에서 [다운로드](https://github.com/kreonet/eduroam-kr-website/archive/master.zip)합니다.
+```console
+$ git clone https://github.com/kreonet/eduroam-kr-website
+$ cd eduroam-kr-website
 ```
 
-## Updating Styles
 
-If you want change the CSS of the theme, you'll probably want to check out these files in the `_sass/` directory:
+### 게시글 작성하기
 
-* `base/_variables.scss`: Common values found throughout the project, including base font size, font families, colors, and more.
-* `base/_typography.scss`: Base typography values for the site (see `typography.html` for a demonstration)
-* `_layout.scss`: The primary styles for the layout and design of the theme.
+게시글은 게시판에 글을 올리는 것과 같이 날자가 지정된 게시물입니다.  
+`http://사이트도메인/카테고리/yyyy/mm/dd/글제목/` 의 주소를 갖습니다.  
+`_posts/2018-01-10-renew.md` 파일을 텍스트 에디터로 열어보세요.
 
-### Important Variables
+**1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일 작성 (텍스트 파일)**
 
-Here are the important variables from `base/_variables.scss` you can tweak to customize the theme to your liking:
+* slug: 해당 포스트의 고유 키로 url의 일부로 사용. 왠만하면 특수문자없이 영문자,숫자,-(하이픈),.(점)...만 사용.
+* yyyy,mm,dd: 발행 년,월,일.
+* 참고: 최종적으로 포스트의 url(permalink)는 `http://사이트도메인/카테고리/yyyy/mm/dd/slug/`
 
-* `$base-font-family`: The font-family of the body text. Make sure to `@import` any new fonts!
-* `$heading-font-family`: The font-family of the headers. Make sure to `@import` any new fonts!
-* `$base-font-size`: The base font-size. Defaults to $em-base from Bourbon (`bourbon/settings/_px-to-em.scss`).
-* `$base-font-color`: The color for the body text.
-* `$action-color`: The color for links in the body text.
-* `$highlight-color`: The color for the footer and page headers (when no cover image provided).
-
-## Configuration
-
-All configuration options can be found in `_config.yml`.
-
-### Site Settings
-
-* __title:__ The title for your site. Displayed in the navigation menu, the `index.html` header, and the footer.
-* __subtitle:__ The subtitle of your site. Displayed in the `index.html` header.
-* __email:__ Your email address, displayed with the Contact info in the footer.
-* __name:__ Your name. _Currently unused._
-* __description:__ The description of your site. Used for search engine results and displayed in the footer.
-* __baseurl:__ The subpath of your site (e.g. /blog/).
-* __url:__ The base hostname and protocol for your site.
-* __cover:__ The relative path to your site's cover image.
-* __logo:__ The relative path to your site's logo. Used in the navigation menu instead of the title if provided.
-
-### Build Settings
-
-* __markdown:__ Markdown parsing engine. Default is kramdown.
-* __paginate:__ Number of posts to include on one page.
-* __paginate_path:__ URL structure for pages.
-* __inter_post_navigation:__ Whether to render links to the next and previous post on each post.
-
-### Archive Settings
-
-Although this theme comes with a combined, categorized archive (see `posts.html`), you can enable further archive creation thanks to [jekyll-archives][archives]. Support for category and tag archive pages is included, but you can also add your own archive pages for years, months, and days.
-
-To change archive settings, see the __jekyll-archives__ section of `_config.yml`:
-
-```yml
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: 'archive'
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
-```
-
-To fully disable the archive, remove the __jekyll-archives__ section AND remove it from the __gems__ list.
-
-__NOTE:__ the Jekyll Archive gem is NOT included with GitHub pages! Disable the archive feature if you intend to deploy your site to GitHub pages. [Here is a guide](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html) on how you can use the `jekyll archive` gem with GitHub pages. The general gist: compile the Jekyll site locally and then push that compiled site to GitHub.
-
-A sitemap is also generated using [jekyll-sitemap][sitemap].
-
-### Syntax Highlighting Settings
-
-Inside of a post, you can enable syntax highlighting with the `{% highlight <language> %}` Liquid tag. For example:
+**2. 파일 상단에 [front matter] 작성**
 
 ```
-{% highlight javascript %}
-function demo(string, times) {
-  for (var i = 0; i < times; i++) {
-    console.log(string);
-  }
-}
-demo("hello, world!", 10);
-{% endhighlight %}
+layout    : post
+title     : "에듀롬 웹사이트 개편 및 2018년 계획"
+author    : 에듀롬담당자
+date      : 2018-01-10 12:00:00
+categories: news
+tags      : renew
+toc       : false
+cover     : "/assets/instacode.png"
 ```
 
-You can change the [HighlightJS theme][highlightjs_theme] in `_config.yml`:
+항목       | 내용
+-----------|--------------
+layout     | post로 고정
+title      | 게시글 제목
+author     | 게시글 작성자
+date       | 게시글 작성일
+categories | 게시글 분류 (띄어쓰기, 한글 X)
+tags       | 태그 (띄어쓰기, 한글 X)
+toc        | 목차 자동생성 여부 (true, false)
+cover      | 커버 이미지 URL
 
-```yml
-highlightjs_theme: "monokai_sublime"
+**3. 본문 작성**
+
+[마크다운(markdown) 문법](https://ko.wikipedia.org/wiki/마크다운)으로 본문을 작성합니다. HTML보다 쉽고 직관적입니다.
+
+
+### 페이지 작성하기
+
+페이지는 글을 올리는 것과 같이 날자가 지정된 게시물입니다.  
+`http://사이트도메인/permlink` 의 주소를 갖습니다.  
+`collabo.md` 파일을 텍스트 에디터로 열어보세요.
+
+**1. 루트 디렉토리에 `permlink.md` 파일 작성 (텍스트 파일)**
+
+**2. 파일 상단에 [front matter] 작성**
+
+```
+layout: page
+title: 협력기관
+toc: false
+permalink: /collabo/
+cover: /assets/covers/collaboration.jpg
 ```
 
-### Disqus Settings
+항목      | 내용
+----------|-------------
+layout    | page로 고정
+title     | 게시글 제목
+toc       | 목차 자동생성 여부 (true, false)
+permalink | 절대링크 (영어로만, 특수문자/띄어쓰기/한글X)
+cover     | 커버 이미지 URL
 
-You can enable [Disqus][disqus] comments for you site by including one config option:
+**3. 본문 작성**
 
-* __disqus_shortname:__ Your Disqus username. If the property is set, Disqus comments will be included with your blog posts.
+[마크다운(markdown) 문법](https://ko.wikipedia.org/wiki/마크다운)으로 본문을 작성합니다. HTML보다 쉽고 직관적입니다.
 
-If you want to disable Disqus for only a specific page, add __disqus_disabled: true__ to the page's front matter.
 
-### Google Analytics Settings
+### 영문 페이지 작성하기
 
-You can enable basic [Google Analytics][ga] pageview tracking by including your site's tracking ID:
-
-* __ga_tracking_id__: The Tracking ID for your website. You can find it on your Google Analytics dashboard. If the property is set, Google Analytics will be added to the footer of each page.
-
-### Social Settings
-
-Your personal social network settings are combined with the social sharing options. In the __social__ section of `_config.yml`, include an entry for each network you want to include. For example:
-
-```yml
-social:
-  - name: Twitter                         # Name of the service
-    icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
-    username: TheBenCentra                # (User) Name to display in the footer link
-    url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
-    desc: Follow me on Twitter            # Description to display as link title, etc
-    share: true                           # Include in the "Share" section of posts
+```
+layout: page
+title: Collaborations
+lang: en
+toc: false
+permalink: /en/collabo/
+cover: /assets/covers/collaboration.jpg
 ```
 
-### Social Protocols
+front matter를 작성할 때, `lang: en`을 추가하고, permlink가 `/en/`으로 시작하도록 한다.
 
-Using the Open Graph Protocol or Twitter Card metadata, you can automatically set the images and text used when people share your site on Twitter or Facebook. These take a bit of setup, but are well worth it. The relevant fields are at the end of the `_config.yml` file.
 
-Also there is another protocol, the Open Source protocol, for saying where your site is hosted if the source is open. This helps develops more easily see your code if they are interested, or if they have issues. For more, see http://osprotocol.com.
+### 메뉴(사이트맵) 작성하기
 
-### Category Descriptions
+```
+menu:
+  - title: "이용방법"
+    url: "/connect/"
+  - title: "협력기관"
+    url: "/collabo/"
+  - title: "기반기술"
+    url: "/tech/"
 
-You can enhance the `posts.html` archive page with descriptions of your post categories. See the __descriptions__ section of `_config.yml`:
-
-```yml
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+...
+en:
+  ...
+  menu:
+    - title: "Connect"
+      url: "/en/connect/"
+    - title: "Collabo"
+      url: "/en/collabo/"
+    - title: "Technology"
+      url: "/en/tech/"
 ```
 
-### Custom Page-Specific Javascript
+`_config.yml` 파일의 menu를 수정하고 빌드합니다.
 
-You can add page-specific javascript files by adding them to the top-level `/js` directory and including the filename in the __custom_js__ page's configuration file:
+### 웹사이트 생성 방법
 
-```yml
-# Custom js (for individual pages)
----
-layout: post
-title:  "Dummy Post"
-date:   2015-04-18 08:43:59
-author: Ben Centra
-categories: Dummy
-custom_js:
-- Popmotion
-- Vue
----
+리눅스나 맥에서 ruby를 설치하고 다음 명령을 실행합니다.  
+(ruby가 설치되지 않았다면, [rbenv](https://rorlab.gitbooks.io/railsguidebook/content/contents/rbenv.html
+)와 [jekyll](http://jekyllrb-ko.github.io/docs/installation/)을 설치하세요.)
+
+```console
+$ cd eduroam-kr-website
+$ bundle exec jekyll build
+$ tar zcvf site.tgz _site/
 ```
 
-The `/js/` directory would contain the corresponding files:
+웹사이트는 `_site` 폴더에 생성됩니다. 생성된 HTML 파일의 `src, href`에 기록되는 URL은 웹서버 루트를 기준으로 한 `절대경로`로 생성됩니다. 웹서버에 업로드 하셔야 제대로 보입니다.
 
-```bash
-$ ls js/
-Popmotion.js Vue.js
+다음 명령을 실행하면, `http://127.0.0.1:8080`으로 생성된 웹페이지를 확인할 수 있습니다.
+
+```console
+$ bundle exec jekyll serve --host 0.0.0.0 --port 8080 --force_polling
 ```
 
-## Contributing
 
-Want to help make this theme even better? Contributions from the community are welcome!
+### 이용 방법 (GitHub Pages 이용)
 
-Please follow these steps:
+GitHub은 Jekyll로 작성된 웹페이지를 무료로 호스팅 해 주고 있습니다. 또한 CNAME 을 통해 기존에 보유한 도메인과도 연동할 수 있습니다. [GitHub Pages 도메인 네임 설정 하기](http://blog.saltfactory.net/setting-domain-name-in-github-pages-via-cname/) 문서를 참고하세요
 
-1. Fork/clone this repository.
-2. Develop (and test!) your changes.
-3. Open a pull request on GitHub. A description and/or screenshot of changes would be appreciated!
-4. I ([Ben Centra](https://github.com/bencentra)) will review and merge the pull request.
+**(주)카카오 기술블로그**는 GitHub Pages를 통해 웹페이지를 제공하고 있습니다.  
+코드 : https://github.com/kakao/kakao.github.io
+사이트 : https://kakao.github.io 또는 http://tech.kakao.com
 
-## License
-
-MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/master/LICENSE.md).
-
-[bencentra]: http://bencentra.com
-[bourbon]: http://bourbon.io/
-[neat]: http://neat.bourbon.io/
-[bitters]: http://bitters.bourbon.io/
-[refills]: http://refills.bourbon.io/
-[fontawesome]: http://fortawesome.github.io/Font-Awesome/
-[highlightjs]: https://highlightjs.org/
-[highlightjs_theme]: https://highlightjs.org/static/demo/
-[lightbox]: http://lokeshdhakar.com/projects/lightbox2/
-[cover]: https://www.flickr.com/photos/79666107@N00/3796678503/in/photolist-6MuYfc-61Rtft-8XzPmY-a6Cozm-54eSMs-6oMJmk-aepZQq-9YkPHp-fiAEGE-dVP4Z5-oxPyJP-atKUFJ-9YHWA5-9YF2f2-9YF2gR-9YHVGN-9YHVvs-qZYYQ6-4JqP2i-a2peGy-9YHVUm-9YHVF7-9YHVCL-9YF3NK-cYteMo-aiPmb9-69dtAi-9YF21x-4aWpmn-7SLiUL-77pqVX-8vXbYv-4HGDSH-a2h5P1-8LsZrQ-9aj1ez-auPZ7q-9YHVMd-9YF2bi-9YF23D-8LpWpn-9an6KL-9YHVZL-dqZ3Cz-2GuvnX-9YHWUo-9YHVWd-p5Roh5-i1zTbv-6sYrUT
-[disqus]: https://disqus.com/
-[ga]: http://www.google.com/analytics/
-[archives]: https://github.com/jekyll/jekyll-archives
-[sitemap]: https://github.com/jekyll/jekyll-sitemap
