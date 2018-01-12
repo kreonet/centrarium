@@ -23,6 +23,13 @@ copyright_detail: >
   <a href="http://www.msip.go.kr">과학기술정보통신부</a>가 지원하고 
   <a href="http://www.kisti.re.kr">한국과학기술정보연구원</a>이 관리하는 
   <a href="http://www.kreonet.net">국가과학기술연구망</a>에서 운영합니다.
+
+menu:
+  - title: "이용방법"
+    url: "/connect/"
+  - title: "협력기관"
+    url: "/collabo/"
+
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
