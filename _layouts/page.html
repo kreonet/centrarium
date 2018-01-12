@@ -4,11 +4,24 @@ layout: default
 <div class="wrapper">
 <div class="page">
 
+  {% if page.cover %}
+  <div class="post-header-container {% if page.cover %}has-cover{% endif %}" {% if page.cover %}style="background-image: url({{ page.cover | prepend: site.baseurl }}); margin-bottom:10px"{% endif %}>
+    <div class="scrim {% if page.cover %}has-cover{% endif %}">
+      <header class="post-header">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.author %}
+        <p class="info">by <strong>{{ page.author }}</strong></p>
+        {% endif %}
+      </header>
+    </div>
+  </div>
+  {% else %}
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   {% include page_divider.html %}
+  {% endif %}
 
   <article class="post-content">
     {{ content | toc }}
