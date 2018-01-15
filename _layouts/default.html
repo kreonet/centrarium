@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 
+  {% if page.lang == 'en' %}
+  {% include head_en.html %}
+  {% else %}
   {% include head.html %}
+  {% endif %}
 
   <body>
 
+    {% if page.lang == 'en' %}
+    {% include header_en.html %}
+    {% else %}
     {% include header.html %}
+    {% endif %}
 
     <div class="page-content">
         {{ content }}
     </div>
 
+    {% if page.lang == 'en' %}
+    {% include footer_en.html %}
+    {% else %}
     {% include footer.html %}
+    {% endif %}
 
   </body>
 

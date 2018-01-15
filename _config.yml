@@ -104,6 +104,45 @@ social:
     desc:
     share: true
 
+en:
+  title: "eduroam, Global Free Wi-Fi for R&E"
+  subtitle: "Global Free Wi-Fi Service With One ID"
+  # email: eduroam@kreonet.kr
+  name: eduroam manager
+  description: eduroam - Global Wi-Fi Roaming for Research & Education
+  copyright: © 1988 - KREONET
+  copyright_detail: >
+    eduroam Korea, 
+    is operated by <a href="http://www.kreonet.net">KREONET</a>, 
+    which managed by <a href="http://www.kisti.re.kr/eng/">KISTI</a>, 
+    and funded by <a href="http://english.msip.go.kr">MISP</a>.
+
+  menu:
+    - title: "Connect"
+      url: "/en/connect/"
+    - title: "Collabo"
+      url: "/en/collabo/"
+
+  social:
+    - name: Facebook
+      icon: facebook
+      username: eduroam Korea Facebook
+      url: https://facebook.com/eduroamkr
+      desc:
+      share: true
+
+    - name: "eduroam Global"
+      icon: home
+      url: https://www.eduroam.org
+      desc:
+      share: true
+
+    - name: "eduroam Korea edu-part"
+      icon: home
+      url: http://www.eduroam.kr
+      desc:
+      share: true
+
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
