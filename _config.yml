@@ -29,6 +29,8 @@ menu:
     url: "/connect/"
   - title: "협력기관"
     url: "/collabo/"
+  - title: "기반기술"
+    url: "/tech/"
 
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
@@ -122,6 +124,8 @@ en:
       url: "/en/connect/"
     - title: "Collabo"
       url: "/en/collabo/"
+    - title: "Technology"
+      url: "/en/tech/"
 
   social:
     - name: Facebook
