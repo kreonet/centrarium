@@ -15,6 +15,7 @@
         {% for page in site.en.menu %}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endfor %}
+        <li class="nav-link"><img src="{{ site.baseurl }}/assets/en.png" height="14"> <a href="javascript:change_lang();"><img src="{{ site.baseurl }}/assets/ko.png" height="14"></a></li>
       </ul>
     </nav>
   </div>
