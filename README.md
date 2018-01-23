@@ -13,8 +13,16 @@ $ git clone https://github.com/kreonet/eduroam-kr-website
 $ cd eduroam-kr-website
 ```
 
+에듀롬 한국 공식사이트 http://eduroam.kreonet.kr 를 다운로드 하고 싶은 경우, ` -b eduroam-kr` 옵션을 추가합니다.
+```console
+$ git clone https://github.com/kreonet/eduroam-kr-website -b eduroam-kr
+$ cd eduroam-kr-website
+```
+
 
 ### 게시글 작성하기
+
+(브랜치를 `eduroam-kr`으로 클론한 경우에만 가능)
 
 게시글은 게시판에 글을 올리는 것과 같이 날자가 지정된 게시물입니다.  
 `http://사이트도메인/카테고리/yyyy/mm/dd/글제목/` 의 주소를 갖습니다.  
