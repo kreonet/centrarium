@@ -15,7 +15,8 @@ layout: default
 <div class="wrapper">
 {% if paginator.page == 1 %}
 <div class="index-preface">
-{% include index_preface_ko.html %}
+{% capture preface %}{% include index_preface_ko.md %}{% endcapture %}
+{{ preface | markdownify }}
 </div>
 <hr />
 {% endif %}

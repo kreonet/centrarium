@@ -16,7 +16,8 @@ permalink: /en/index.html
 
 <div class="wrapper">
 <div class="index-preface">
-{% include index_preface_en.html %}
+{% capture preface %}{% include index_preface_en.md %}{% endcapture %}
+{{ preface | markdownify }}
 </div>
 
 </div>
