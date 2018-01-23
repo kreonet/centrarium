@@ -12,33 +12,37 @@ keep_files: [.htaccess, files]
 
 
 # Site settings
-title: "글로벌 Wi-Fi 로밍 서비스, 에듀롬"
-subtitle: "하나의 아이디로 이용하는 글로벌 무료 Wi-Fi"
+# title: "에듀롬"
+title: "에듀롬 @ KISTI"
+subtitle: "한국과학기술정보연구원 에듀롬 서비스 안내"
 # email: eduroam@kreonet.kr
-name: 에듀롬담당자
-description: 글로벌 Wi-Fi 로밍 서비스, 에듀롬 - 하나의 아이디로 이용하는 글로벌 무료 Wi-Fi 서비스
-copyright: © 1988 - 국가과학기술연구망
+name: "KISTI 에듀롬담당자"
+description: "한국과학기술정보연구원 에듀롬 서비스 안내"
+copyright: © 1988 - KISTI
 copyright_detail: >
+  <a href="http://www.kisti.re.kr">한국과학기술정보연구원</a>은 
+  <a href="http://eduroam.kreonet.kr">에듀롬(한국)</a>과의 협력을 통해 
+  본 연구원에서 에듀롬 서비스를 제공합니다.<br />
   대학생과 연구자를 위한 글로벌 Wi-Fi 로밍 서비스인 에듀롬은 
   <a href="http://www.msip.go.kr">과학기술정보통신부</a>가 지원하고 
   <a href="http://www.kisti.re.kr">한국과학기술정보연구원</a>이 관리하는 
   <a href="http://www.kreonet.net">국가과학기술연구망</a>에서 운영합니다.
 
+
 menu:
-  - title: "이용방법"
-    url: "/connect/"
   - title: "협력기관"
-    url: "/collabo/"
+    url: "http://eduroam.kreonet.kr/collabo/"
   - title: "기반기술"
-    url: "/tech/"
+    url: "http://eduroam.kreonet.kr/tech/"
 
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "/sample" # the subpath of your site, e.g. /blog/
 url: "http://eduroam.kreonet.kr/sample" # the base hostname & protocol for your site
-cover: "/assets/covers/global_connection.png"
+cover: "/assets/covers/kisti.jpg"
 logo: "/assets/logo.png"
+logo2: "/assets/logo_kisti.png"
 
 # Build settings
 markdown: kramdown
@@ -87,10 +91,15 @@ descriptions:
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
 social:
-  - name: Facebook
-    icon: facebook
-    username: 에듀롬 페이스북 (한국)
-    url: https://facebook.com/eduroamkr
+  - name: "에듀롬(한국) 홈페이지"
+    icon: home
+    url: http://eduroam.kreonet.kr
+    desc:
+    share: true
+
+  - name: "에듀롬(한국) 교육부문 홈페이지"
+    icon: home
+    url: http://www.eduroam.kr
     desc:
     share: true
 
@@ -100,38 +109,41 @@ social:
     desc:
     share: true
 
-  - name: "에듀롬 교육부문 홈페이지"
-    icon: home
-    url: http://www.eduroam.kr
+  - name: Facebook
+    icon: facebook
+    username: 에듀롬 페이스북 (한국)
+    url: https://facebook.com/eduroamkr
     desc:
     share: true
 
+
 en:
-  title: "eduroam, Global Free Wi-Fi for R&E"
-  subtitle: "Global Free Wi-Fi Service With One ID"
+  title: "eduroam @ KISTI"
+  subtitle: "eduroam Service Information at KISTI"
   # email: eduroam@kreonet.kr
-  name: eduroam manager
-  description: eduroam - Global Wi-Fi Roaming for Research & Education
-  copyright: © 1988 - KREONET
+  name: KISTI eduroam manager
+  description: eduroam Service Information at KISTI
+  copyright: © 1988 - KISTI
   copyright_detail: >
-    eduroam Korea, 
+    eduroam is served on <a href="http://www.kisti.re.kr/eng/">KISTI</a> 
+    in collaboration with 
+    <a href="http://www.kisti.re.kr/eng/">KISTI</a> and 
+    <a href="http://eduroam.kreonet.kr">eduroam Korea</a>.<br />
+    <a href="http://eduroam.kreonet.kr">eduroam Korea</a> 
     is operated by <a href="http://www.kreonet.net">KREONET</a>, 
     which managed by <a href="http://www.kisti.re.kr/eng/">KISTI</a>, 
     and funded by <a href="http://english.msip.go.kr">MISP</a>.
 
   menu:
-    - title: "Connect"
-      url: "/en/connect/"
     - title: "Collabo"
-      url: "/en/collabo/"
+      url: "http://eduroam.kreonet.kr/en/collabo/"
     - title: "Technology"
-      url: "/en/tech/"
+      url: "http://eduroam.kreonet.kr/en/tech/"
 
   social:
-    - name: Facebook
-      icon: facebook
-      username: eduroam Korea Facebook
-      url: https://facebook.com/eduroamkr
+    - name: "eduroam Korea"
+      icon: home
+      url: http://eduroam.kreonet.net/en/
       desc:
       share: true
 
@@ -146,6 +158,15 @@ en:
       url: http://www.eduroam.kr
       desc:
       share: true
+
+    - name: Facebook
+      icon: facebook
+      username: eduroam Korea Facebook
+      url: https://facebook.com/eduroamkr
+      desc:
+      share: true
+
+
 
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter

@@ -1,14 +1,84 @@
-## 에듀롬 이용자격 및 사용방법
+### (각 기관의 에듀롬 담당자님께)
 
-이용자격 : 에듀롬과 협약한 국내 대학교 및 연구소의 구성원  
-이용방법 : `eduroam` Wi-Fi(SSID)에 대학교 또는 연구소의 `이메일주소`로 로그인  
-이용장소 : 전 세계 에듀롬 협력기관 (85개 국가, 4,885개 기관, 23,360개 장소)  
-[... 더 자세히 알아보기]({{ site.baseurl }}/connect/)
+다음 절차에 따라 에듀롬 안내페이지 작성을 부탁드립니다.
 
-## 국내 에듀롬 Wi-Fi 서비스 지역
+1. 기관의 무선인터넷 안내페이지에 에듀롬 안내 및 이용방법을 기재
+1. `eduroam.기관KR도메인` 서브도메인 생성
+    - 예) 기관KR도메인이 `kisti.re.kr` 인 경우 `eduroam.kisti.re.kr` 도메인 생성
+1. 생성된 서브도메인에 무선인터넷 안내페이지 연결, 또는 에듀롬 소개를 위한 별도의 웹페이지 연결
 
-<iframe src="/map/index.html?key=AIzaSyBmmnJJ_u1LM05Ogt9yG1zyiuD-9nvYyJ0" style="border:0px; height:600px;" width="100%"></iframe>
+---
 
-## 국제 에듀롬 Wi-Fi 서비스 지역
 
-[![eduroam world map]({{ site.baseurl }}/assets/eduroam-world-map.png)](https://monitor.eduroam.org/map_service_loc.php)
+### KISTI 에듀롬 서비스 안내
+
+에듀롬(eduroam, education roaming)은 국제적인 연구 및 교육 커뮤니티를 위한 글로벌 Wi-Fi 로밍서비스입니다.
+
+에듀롬 가입 구성원은 자신의 에듀롬 계정(이메일주소/비밀번호 등)으로 추가 인증 절차 없이 전 세계 에듀롬 협력기관(연구소, 대학교 등)의 무선랜을 이용할 수 있습니다.
+
+한국과학기술정보연구원은 2012년 8월 13일부터 에듀롬(eduroam) 서비스를 제공하고 있습니다.
+
+
+### KISTI 에듀롬 이용자격 및 사용방법
+
+* 이용자격 : 
+    - KISTI 에듀롬 담당자에게 `에듀롬 계정`을 발급받은 KISTI 구성원 (발급문의 : ☎ 내선 1292)
+    - `에듀롬 계정`을 발급받은 전 세계 에듀롬 사용자
+* 이용방법 : 
+    - `eduroam` Wi-Fi(SSID)에 발급받은 `에듀롬 계정`으로 로그인
+* 이용장소 : 
+    - (원내) 본관 1층 국제회의실 (서비스지역 확대 검토중)
+    - (국내) [국내 에듀롬 협력기관](http://eduroam.kreonet.kr)
+    - (해외) [전 세계 에듀롬 협력기관 (85개 국가, 4,885개 기관, 23,360개 장소)](https://monitor.eduroam.org/map_service_loc.php)
+
+
+### KISTI 에듀롬 보안정책
+
+KISTI 에듀롬 이용시 본 연구원의 보안정책을 준수해야 합니다.
+
+인터넷 정책 : 일과시간 (08:00 ~ 19:00) 중 IP주소별 인터넷 대역폭 제한, 주요포트 차단 운영
+
+
+### KISTI 에듀롬 주요 차단 포트
+
+차단포트 | 서비스명                      | 차단 범위
+:-------:|:-----------------------------:|:----------:
+TCP 21   | FTP                           | 원외 → 원내
+TCP 22   | SSH                           | 원외 → 원내
+TCP 25   | SMTP                          | 원외 ↔ 원내
+TCP 80   | HTTP                          | 원외 → 원내
+TCP 110  | POP3                          | 원외 → 원내
+TCP 143  | IMAP                          | 원외 → 원내
+TCP 1433 | MySQL (DB connection)         | 원외 → 원내
+TCP 3306 | MySQL (DB Connection)         | 원외 → 원내
+TCP 3389 | MSTSC (윈도우 원격 데스크탑)  | 원외 → 원내
+TCP 5800 | VNC (맥/리눅스 원격 데스크탑) | 원외 → 원내
+TCP 5900 | VNC (맥/리눅스 원격 데스크탑) | 원외 → 원내
+기타     | 웜/바이러스                   | 원외 ↔ 원내
+
+
+### KISTI 에듀롬 문의
+
+* KISTI 구성원 : ☎ 내선 1292
+* 외부기관 사용자 : 소속기관 무선인터넷 담당부서
+
+
+---
+
+
+### (참고)
+
+* 에듀롬(한국) 안내 페이지
+    - <http://eduroam.kreonet.kr>
+    - <https://github.com/kreonet/eduroam-kr-website>
+* 고려대학교 에듀롬 안내 페이지
+    - <http://wifi.korea.ac.kr/ku_re/korea_network_eduroam.jsp>
+    - 고려대학교 구성원(재학생/교직원/졸업생) 모두에게 에듀롬 제공
+    - OS별 설정방법 및 프로그램 제공 (한글/영문)
+* 서울대학교 에듀롬 안내 페이지
+    - <http://eduroam.snu.ac.kr>
+    - 에듀롬 소개를 위한 별도 도메인 생성
+    - 무료로 이용 가능한 통신 3사 WiFi 이용방법도 기재
+    - 차단 서비스 및 포트 기재
+* 전남대 에듀롬 안내 페이지
+    - <http://www.jnu.ac.kr/MainUniLife/InforService/Eduroam.aspx>
