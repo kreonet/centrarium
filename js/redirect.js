@@ -5,7 +5,7 @@ if(document.location.href.includes(SECOND_DOMAIN)){
   document.location.href = document.location.href.replace(SECOND_DOMAIN,BASE_DOMAIN);
 }
 
-BASE_DIR="";
+BASE_DIR="/sample";
 
 function change_lang(){
   ORIGIN = document.location.hostname + (document.location.port ? ':' + document.location.port: '') + BASE_DIR;

@@ -35,8 +35,8 @@ menu:
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://eduroam.kreonet.kr" # the base hostname & protocol for your site
+baseurl: "/sample" # the subpath of your site, e.g. /blog/
+url: "http://eduroam.kreonet.kr/sample" # the base hostname & protocol for your site
 cover: "/assets/covers/global_connection.png"
 logo: "/assets/logo.png"
 
